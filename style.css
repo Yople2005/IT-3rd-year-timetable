@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(to bottom, #e1bee7, #f3e5f5); /* Soft lavender gradient */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+.card {
+  background-color: #f8f0fa;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-cute {
+  background-color: #ba68c8;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: transform 0.2s;
+}
+.btn-cute:hover {
+  transform: scale(1.1);
+}
+.day-divider {
+  border-top: 2px solid #ba68c8;
+}
