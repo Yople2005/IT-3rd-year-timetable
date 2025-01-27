@@ -70,11 +70,13 @@ if (todayIndex === 6 || todayIndex === 0) {
 
     if (remainingClasses.length > 0) {
       // Classes are still remaining for today
-      message = "Remaining classes for today:<br>" + remainingClasses
+      message = "Classes for today:<br>" + classesToday
+        .map(item => `${item.time}: ${item.subject} (${item.type})`)
+        .join("<br>") + "<br><br>Remaining classes:<br>" + remainingClasses
         .map(item => `${item.time}: ${item.subject} (${item.type})`)
         .join("<br>");
     } else {
-      // All classes are over, display the next day's classes
+      // All classes are over, display all classes for today and the next day's classes
       message = "All classes are over for today.<br>Here's your schedule for tomorrow:<br>";
       const nextDayIndex = (todayIndex + 1) % 7; // Get the next day's index
       const nextDayName = dayjs().day(nextDayIndex).format("dddd");
